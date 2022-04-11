@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        let age = +prompt("сколько тебе лет?")
+        if(isNaN(age) || age < 0) {
+            let age = +prompt("Введи число")
+        }
+        const lastNumber = age % 10;
+        const lastTwoNumbers = age % 100;
+        if(lastTwoNumbers >=10 && lastTwoNumbers <=20) {
+            console.log(`Тебе ${age} лет`);   
+        } else if (lastNumber===1) {
+            console.log(`Тебе ${age} год`);
+        } else if (lastNumber >=2 && lastNumber <=4) {
+            console.log(`Тебе ${age} года`);
+        }else if (lastNumber >=5 && lastNumber <=9) {
+            console.log(`Тебе ${age} лет`);
+        } else {
+            console.log(`Тебе ${age} лет`);
+        }
+    </script>
 </body>
 </html>
